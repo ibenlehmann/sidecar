@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menumad from "../components/Menumad.astro";
+
+const url = `https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMad?select=*`;
+const apiKey = "sb_publishable_Ik-Cm_IdDH9hqrY-8tragg_fTz_0YjC";
+
+const options = {
+  headers: {
+    apikey: apiKey,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
+---
+
+
+
+<Layout title="Menukort Mad">
+<h1>Brunchca</h1>
+{data.map((mad) => <Menumad mad={mad} />)}
+</Layout>

@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import Layout from "../layouts/Layout.astro";
 import Pakke from "../components/Pakke.astro";
 
@@ -17,6 +18,64 @@ console.log(data);
 ---
 
 <Layout title="Selskaber">
-<h1>Brunchcaf</h1>
+<div>
+    <div>
+    <h2>Lokalet til dit næste bruncharrangement</h2>
+    <img src="" alt="">
+    </div>
+    <p>Velkommen til vores selskabslokale, dedikeret til at give dig de bedste rammer for enhver 
+    festlig begivenhed på Nørrebro i København. Hvad end du planlægger et firmaarrangement, 
+    en konfirmation, en stor fødselsdag eller endda et bryllup, så kan vores selskabslokale 
+    styles til dine ønsker. Læs mere om vores festlokale på siden her, og hvordan vi kan hjælpe 
+    dig med at planlægge en uforglemmeligt fest.</p>
+</div>
+<div>
+  <div>
+    <p>45</p>
+    <p>Siddende gæster</p>
+</div>
+<div>
+    <p>70</p>
+    <p>Stående gæster</p>
+</div>
+</div>
+
+<div>
+  <h2>De forskellige pakker</h2>
+  <p>Alle pakker indholder vores signaturbrunch med en blanding af kolde og varme retter samt kaffe, 
+    the og juice ad libitum i jeres helt eget lokale</p>
+</div>
+
  {data.map((pakke) => <Pakke pakke={pakke} />)}
+
+ <div>
+  <h2>Hold dit næste event hos sidecar</h2>
+  <img src="" alt="">
+  <p>Kontakt os i dag for at lære mere om lejemulighederne! Vores selskabslokale er et stort og lyst rum, 
+    der passer til enhver festlig begivenhed. Lokalet har en bar, egne toiletter, projektor og lyd.</p>
+    <p>Bordene kan rykkes rundt som du ønsker, så det passer til dine ønsker. Der er et hyggeligt udendørs 
+      areal og egen indgang.</p>
+      <p>Lokalet ligger cirka 8 min. gang både fra Nuuks Plads metro station og parkeringshuset på Blågårdsgade 57, 
+        så det er nemt for dine gæster at komme frem og tilbage.</p>
+ </div>
+ <div>
+  <h2>Mad og drikke til dit selskab</h2>
+  <img src="" alt="">
+  <p>Mad og drikke spiller en vigtig rolle når vi fejrer store og små øjeblikke. Helt specielt er det, at vi tager 
+    os af alt det praktiske, så du bare kan nyde tiden med dine gæster.</p>
+  <p>Vi tilbyder vores signaturbrunch, som mange kender fra vores restaurant lige rundt om hjørnet. 
+      Brunchen består af en overdådig buffet med brød, spreads, yoghurtkopper, charcuterie, forskellige salater 
+      og meget mere. Desuden får man serveret varme retter som røræg, bacon, pølser og vafler direkte fra køkkenet
+       ned til bordet. Vi tager selvfølgelig hånd om allergener og præferencer.</p>
+  <p>Til at skylde ned med, er der specialkaffe fra Copenhagen Coffee lab, samt the og både appelsin og æblejuice.
+       Hvis man rigtig vil fejre, så har vi selvfølgelig også bobler af enhver slags til rådighed.</p>
+ </div>
 </Layout>
+
+
+<style>
+  h2{
+    color: var(--color-secondary);
+  }
+
+</style>

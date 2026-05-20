@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import Layout from "../layouts/Layout.astro";
 import Menumad from "../components/Menumad.astro";
 
@@ -17,8 +18,247 @@ console.log(data);
 ---
 
 
-
 <Layout title="Menukort Mad">
-<h1>Brunchca</h1>
-{data.map((mad) => <Menumad mad={mad} />)}
+ <section class="hero">
+   <h1>Menu</h1>
+   <p>Vi har åbent kl 9-16 hver dag. <br>
+      Køkkenet lukker kl 15. 
+   </p>
+
+    <div class="hero_tabs">
+      <a class="mad" href="/menukort">MAD</a>
+      <a href="/menukort_drik">DRIKKE</a>
+    </div>
+  </section>
+
+  <button class="book_btn"> Book Bord </button>
+
+  <section class="brunch_priser">
+    <h2>Brunch</h2>
+
+    <div class="priser">
+      <p>Weekend</p>
+    <p>209 kr.</p>
+
+    <p>Hverdage</p>
+    <p>189 kr.</p>
+
+    <p>Børn (3–12år)</p>
+    <p>halv pris.</p>
+    </div>
+
+    <p class="muligheder" >I vælger hver 4 muligheder nedenfor:</p>
+    
+  </section>
+ 
+ {data.map((mad) => <Menumad mad={mad} />)}
+
+  <p class="p_text" id="basket">Share your choices with your waiter and <span>help yourself to the buffet table</span> everything coming from the kitchen is served family style </p>
+
+  <section class="section_3">
+    <div class="top" id="basket">
+      <h2>Other</h2>
+     <p>Available monday to friday 8-15</p>
+    </div>
+    
+    <div id="basket">
+      <p class="p_bold">Croissant </p>
+      <p class="p2">29 kr.</p>
+      <p class="p_bold">Toasted sourdough bread</p>
+      <p class="p2">with vesterhavsost and butter 40 kr.</p>
+      <p class="p_bold">Sidecar waffle </p>
+      <p class="p2">with mascapone cream, berry compote & white chocolate 70 kr.</p>
+    </div>
+    
+  </section>
+ 
 </Layout>
+
+
+
+<style>
+  h1, h2, p{
+    color: var(--color-secondary);
+  }
+
+  /* hero sectionen med knap */
+  .hero{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 3rem 0 2.5rem;
+   border-bottom: 0.5px solid var(--color-black);
+  }
+
+  .hero p{
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  .hero_tabs {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero_tabs a{
+    font-size: 20px;
+    font-family: "Gloock", serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color-secondary);
+  }
+
+  .hero_tabs a:visited{
+    color: var(--color-secondary);
+     text-decoration: none;
+  }
+
+  .hero_tabs a.mad,
+  .hero_tabs a.mad:visited {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+  .book_btn {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    margin-right: 1rem;
+    border-radius: 15px 15px 0 0;
+    z-index: 100;
+  }
+
+  /* section 2 brunch priser */
+
+  .brunch_priser{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .priser {
+    display: grid;
+    grid-template-columns: auto auto;
+   gap: 0 2rem;
+  }
+
+  .priser p{
+    margin: 4px; 
+  }
+
+  .muligheder{
+    margin: 5rem 0 1rem;
+  }
+
+  /* section 3 */
+  .p_text{
+   justify-self: center;
+   max-width: 380px;
+   padding: 3rem 0 5rem;
+  }
+
+  span {
+    font-weight: 800;
+}
+
+.section_3{
+  display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 8rem;
+}
+
+ .p_bold {
+   font-size: 18px;
+   font-weight: 600;
+   max-width: 400px;
+   text-align: center;
+   margin-bottom: 0;
+   
+   
+   }
+
+   .section_3 div{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 1rem;
+   max-width: 380px;
+   text-align: center;
+
+   }
+
+   .section_3 h2{
+    margin-bottom: 0rem;
+   }
+
+   .p2{
+    margin-top: 0;
+   }
+
+   /* DESKTOP */
+
+   @media (min-width: 800px){
+    /* sektion 1 hero */
+    .hero{
+     margin: 5rem 0 4rem;
+    }
+
+    .hero_tabs{
+    gap: 5rem;
+    padding-top: 3rem;
+  }
+
+
+  .hero_tabs a{
+    font-size: 30px;
+   padding-bottom: 4rem;
+  }
+
+  /* sektion 3 */
+  .p_text{
+   max-width: 550px;
+   padding: 4rem 0 8rem;
+  }
+
+  .p_bold {
+   font-size: 25px;
+   }
+
+   /* KNAP */
+   .book_btn {
+    top: 60%;
+    margin-right: 1.5rem;
+  }
+   }
+
+   /* animationer */
+   /**** med id basket, bliver synlig når man scroller ***/
+
+ #basket {
+   animation: clip-reveal-top ease-in-out both;
+   animation-timeline: view();
+   animation-range: 10% 30%;
+  }
+
+ @keyframes clip-reveal-top {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+ }
+
+
+ 
+</style>

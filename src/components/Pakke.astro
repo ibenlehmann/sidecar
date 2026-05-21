@@ -3,6 +3,7 @@ const { pakke } = Astro.props;
 ---
 
 <div class="enkelpakke">
+   <img src={pakke.img} alt="pakker">
    <h2>{pakke.nummer}</h2>
    <p>{pakke.navn}</p>
    <a href=`enkel_pakke/${pakke.id}`>
@@ -18,14 +19,39 @@ const { pakke } = Astro.props;
          color: var(--color-white);
       }
 .enkelpakke{
-   background-color: var(--color-secondary);
    text-align: center;
-   padding: 30px 0px;
-   border-bottom: solid var(--color-white);
+   padding: 50px;
+   border-bottom: solid 0.5px var(--color-white);
+}
+.enkelpakke:last-child{
+   border-bottom: none;
+   padding-bottom: 80px;
+}
+
+img{
+   border-radius: 50%;
+   aspect-ratio: 1/1;
+   padding: 40px 0;
+   justify-self: center;
+  max-width: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Desktop */
 @media (min-width: 800px){
+h2{
+   font-size: 2rem;
+}
+
+   .enkelpakke{
+      border-right: solid 0.5px var(--color-white);
+      border-bottom: none;
+   }
+
+   .enkelpakke:last-child{
+      border-right: none;
+   }
 }
 
    </style>

@@ -1,5 +1,7 @@
 ---
 //@ts-nocheck
+import Layout from '../../layouts/Layout.astro';
+
 export async function getStaticPaths() {
 const url = `${import.meta.env.SUPABASE_URL}/rest/v1/pakke`;
 const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
@@ -27,10 +29,20 @@ const data = await response.json();
 const { pakke } = Astro.props;
 ---
 
- <h2>{pakke.nummer}</h2>
-   <p>{pakke.navn}</p>
-   <p>{pakke.info}</p>
+<Layout title={pakke.nummer}>
 
+    <section>
+        <div class="grid_pakke">
+            <div>
+ <h2>{pakke.nummer}</h2>
+   <h2>{pakke.navn}</h2>
+   <p>{pakke.info}</p>
+</div>
+<div>
+   <img src={pakke.img} alt="pakker">
+</div>
+</div>
+</section>
    <h2>Kontakt os</h2>
 
 <form class="webform">
@@ -61,3 +73,25 @@ const { pakke } = Astro.props;
 
 <button>Send besked</button>
 </form>
+
+</Layout>
+
+<style>
+    h2{
+        color: var(--color-secondary);
+    }
+.grid_pakke{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 100px;
+}
+h2:first-of-type{
+    margin-bottom: 0px;
+
+}
+
+h2:last-of-type{
+    margin-top: 0px;
+}
+</style>

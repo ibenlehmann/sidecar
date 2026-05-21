@@ -1,0 +1,63 @@
+---
+//@ts-nocheck
+export async function getStaticPaths() {
+const url = `${import.meta.env.SUPABASE_URL}/rest/v1/pakke`;
+const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+  headers: {
+    apikey: apiKey,
+  },
+};
+
+const response = await fetch(url, options);
+
+  if (!response.ok) {
+    throw new Error("Kunne ikke hente produkter fra Supabase");
+  }
+
+const data = await response.json();
+
+  return data.map((pakke) => ({
+    params: { id: pakke.id.toString() },
+    props: { pakke },
+  }));
+}
+
+const { pakke } = Astro.props;
+---
+
+ <h2>{pakke.nummer}</h2>
+   <p>{pakke.navn}</p>
+   <p>{pakke.info}</p>
+
+   <h2>Kontakt os</h2>
+
+<form class="webform">
+<fieldset>
+    <label for="name">Fulde navn</label>
+    <input class="text" type="text" name="name" id="name" required value="Dit fulde navn">
+</fieldset>
+<fieldset>
+    <label for="pakke">Vælg pakke</label>
+    <input type="text" name="pakke" id="pakke" value="Vælge pakke her">
+</fieldset>
+<fieldset>
+    <label for="email">E-mail</label>
+    <input type="email" name="email" id="email" required value="Din e-mailadresse">
+</fieldset>
+<fieldset>
+    <label for="date_time">Dato og tidspunkt for ankomst</label>
+    <input type="text" name="" id="date_time" value="Dato & tidspunkt">
+</fieldset>
+<fieldset>
+    <label for="gaester">Antal gæster</label>
+    <input type="number" name="antal" id="gaester" value="Indtast et tal">
+</fieldset>
+<fieldset>
+    <label for="besked">Besked</label>
+    <textarea name="besked" id="besked" rows="6" cols="40" required>Beskriv hvad du/i kunne tænke jer...</textarea>
+</fieldset>
+
+<button>Send besked</button>
+</form>

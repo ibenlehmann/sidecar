@@ -1,0 +1,56 @@
+<!-- ---
+//@ts-nocheck
+import Pakke from "../../components/Pakke.astro";
+import Enkelpakke from "../components/Enkelpakke.astro";
+import Layout from "../layouts/Layout.astro";
+
+const url = `https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/pakke?select=*`;
+const apiKey = "sb_publishable_Ik-Cm_IdDH9hqrY-8tragg_fTz_0YjC";
+
+const options = {
+  headers: {
+    apikey: apiKey,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
+---
+
+<Layout title="kommer senere">
+<h1>hej</h1>
+{data.map((enkelpakke) => <Enkelpakke enkelpakke={enkelpakke} />)}
+
+<h2>Kontakt os</h2>
+
+<form class="webform">
+<fieldset>
+    <label for="name">Fulde navn</label>
+    <input class="text" type="text" name="name" id="name" required value="Dit fulde navn">
+</fieldset>
+<fieldset>
+    <label for="pakke">Vælg pakke</label>
+    <input type="text" name="pakke" id="pakke" value="Vælge pakke her">
+</fieldset>
+<fieldset>
+    <label for="email">E-mail</label>
+    <input type="email" name="email" id="email" required value="Din e-mailadresse">
+</fieldset>
+<fieldset>
+    <label for="date_time">Dato og tidspunkt for ankomst</label>
+    <input type="text" name="" id="date_time" value="Dato & tidspunkt">
+</fieldset>
+<fieldset>
+    <label for="gaester">Antal gæster</label>
+    <input type="number" name="antal" id="gaester" value="Indtast et tal">
+</fieldset>
+<fieldset>
+    <label for="besked">Besked</label>
+    <textarea name="besked" id="besked" rows="6" cols="40" required>Beskriv hvad du/i kunne tænke jer...</textarea>
+</fieldset>
+
+<button>Send besked</button>
+</form>
+
+</Layout> -->

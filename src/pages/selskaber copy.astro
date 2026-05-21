@@ -3,8 +3,8 @@
 import Layout from "../layouts/Layout.astro";
 import Pakke from "../components/Pakke.astro";
 
-const url = `${import.meta.env.SUPABASE_URL}/rest/v1/pakke`;
-const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+const url = `https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/pakke?select=*`;
+const apiKey = "sb_publishable_Ik-Cm_IdDH9hqrY-8tragg_fTz_0YjC";
 
 const options = {
   headers: {
@@ -12,18 +12,12 @@ const options = {
   },
 };
 
-const response = await fetch(url, options);
+const data = await fetch(url, options).then((res) => res.json());
 
-  if (!response.ok) {
-    throw new Error("Kunne ikke hente produkter fra Supabase");
-  }
-
-  const data = await response.json();
-
+console.log(data);
 ---
 
 <Layout title="Selskaber">
-<body>
 
 <div class="del1">
     <div class="del1_overskrift">
@@ -57,10 +51,7 @@ const response = await fetch(url, options);
     the og juice ad libitum i jeres helt eget lokale</p>
 </div>
 
-<div class="del3_pakker">
-  {data.map((pakke) => <Pakke pakke={pakke} />)}
-
-</div>
+ {data.map((pakke) => <Pakke pakke={pakke} />)}
 
  <div class="del4">
   <h2>Hold dit næste event hos sidecar</h2>
@@ -90,15 +81,10 @@ const response = await fetch(url, options);
   <p class="del5_buttom_text">Til at skylde ned med, er der specialkaffe fra Copenhagen Coffee lab, samt the og både appelsin og æblejuice.
        Hvis man rigtig vil fejre, så har vi selvfølgelig også bobler af enhver slags til rådighed.</p>
  </div></div>
- </body>
 </Layout>
 
 
 <style>
-body{
-  margin: 0;
-}
-
   h2{
     color: var(--color-secondary);
     text-align: center;
@@ -174,6 +160,8 @@ padding: 30px 20px;
 }
 
 
+
+
 /* Tekst hopper under billede ved under 500px */
 @media (max-width: 500px){
 .del4_grid, .del5_grid{
@@ -230,11 +218,6 @@ padding: 30px 20px;
 
   .del3 p{
     padding: 0px 10%;
-  }
-
-  .del3_pakker{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .del4 img{

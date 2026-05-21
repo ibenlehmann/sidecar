@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
    <div class="cocktailheroimagetext">
 <h1>Cocktail Catering</h1>
 <p class="heroP">Skræddersyet til dit event</p>
-<button class="semenu">Se cocktail menu</button>
+<a href="/pages/cocktailmenu.astro"><button class="semenu">Se cocktail menu</button></a>
 </div>
 
 <h2>En komplet barløsning til enhver lejlighed</h2>
@@ -23,6 +23,48 @@ import Layout from "../layouts/Layout.astro";
 <p class="bottomtextt">Sidecars cocktail catering bygger videre på den varme og imødekommende atmosfære, der definerer vores sted på Nørrebro. Vores mobile cocktailbar er en forlængelse af den unikke Sidecar-oplevelse - med den samme passion for nærvær, håndværk og kvalitet. Vidste du, at vi har leveret cocktail catering i over 10 år – længere end Sidecar selv har eksisteret? Det var faktisk sådan, Sidecar begyndte.</p>
 </div>
 </div>
+
+<section class="tilbud">
+
+<h2 class="h2tilbud">Det får du når du lejer en bar hos Sidecar:</h2>
+
+<div class="inkoerwrap">
+
+<div>
+<img class="ikonerr" src="/public/ikonertilsidecarmenu/findevejikon.png" alt="landsdækkendeservice">
+<p class="bigP">Landsdækkende Service</p>
+<p class="smallP">Vi holder til i København, men kører glædeligt ud i resten af Danmark, og sørger for cocktails til dit event.</p>
+</div>
+
+<div>
+<img class="ikonerr" src="/public/ikonertilsidecarmenu/shakerikon.png" alt="landsdækkendeservice">
+<p class="bigP">Profesionelle Bartendere</p>
+<p class="smallP">Baren bemandes altid af vores professionelle, erfarne og personlige bartendere.</p>
+</div>
+
+<div>
+<img class="ikonerr" src="/public/ikonertilsidecarmenu/cocktaildrinksikon.png" alt="landsdækkendeservice">
+<p class="bigP">Cocktails af Høj Kvalitet</p>
+<p class="smallP">Alle cocktails er lavet med ingredienser af høj kvalitet. Sirupperne laver vi også selv in-house.</p>
+</div>
+
+<div>
+<img class="ikonerr" src="/public/ikonertilsidecarmenu/planlaegikon.png" alt="landsdækkendeservice">
+<p class="bigP">Skræddersyet Til Dit Event</p>
+<p class="smallP">Fadølsanlæg? Unik cocktail med en særlig farve? Vi tilpasser vores tilbud særligt til dine drømme og ønsker.</p>
+</div>
+
+<div>
+<img class="ikonerr" src="/public/ikonertilsidecarmenu/vistaarforaltikon.png" alt="landsdækkendeservice">
+<p class="bigP">Vi Står For Det Hele</p>
+<p class="smallP">Vi medbringer alle nødvendige dele, sætter baren op, laver en masse gode drinks, og pakker baren ned igen.Du skal blot sørge for at nyde dine gæsters selskab!</p>
+</div>
+
+</div>
+
+<a href="/pages/cocktailmenu.astro"><button class="button">Send forespørgelse</button></a>
+
+</section>
 
 <h2>Lej en bar: Mobil cocktailbar til fest</h2>
 <div class="cocktailimagewrap2">
@@ -125,7 +167,7 @@ p {
     margin: 0;
     padding-bottom: 1rem;
     color: white;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 h2 {
@@ -135,6 +177,48 @@ h2 {
     color: #2B3461;;
 }
 
+.tilbud {
+    background-color: #2B3461;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+}
+
+.h2tilbud {
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.ikonerr {
+    width: 180px;
+    justify-self: center;
+}
+
+.bigP {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+}
+
+.smallP {
+    padding: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 3rem;
+    color: white;
+}
+
+.button {
+    margin-bottom: 3rem;
+        display: block;
+    margin: 0 auto 3rem auto;
+}
+
+a {
+    text-decoration: none;
+}
 
 @media (min-width: 800px){ 
 
@@ -192,10 +276,26 @@ margin-right: 200px;
 .cocktailimagewrap3 {
      display: grid;
 grid-template-columns: 1fr 1fr;
+padding-bottom: 6rem;
 }
 
 .bottomtextt3 {
 margin-right: 200px;
+}
+
+.inkoerwrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bigP {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.h2tilbud {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
 }

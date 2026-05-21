@@ -1,12 +1,26 @@
----
+<!-- ---
 //@ts-nocheck
+import Pakke from "../../components/Pakke.astro";
 import Enkelpakke from "../components/Enkelpakke.astro";
 import Layout from "../layouts/Layout.astro";
+
+const url = `https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/pakke?select=*`;
+const apiKey = "sb_publishable_Ik-Cm_IdDH9hqrY-8tragg_fTz_0YjC";
+
+const options = {
+  headers: {
+    apikey: apiKey,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
 ---
 
 <Layout title="kommer senere">
 <h1>hej</h1>
-{data.map((pakke) => <Enkelpakke pakke={pakke} />)}
+{data.map((enkelpakke) => <Enkelpakke enkelpakke={enkelpakke} />)}
 
 <h2>Kontakt os</h2>
 
@@ -39,4 +53,4 @@ import Layout from "../layouts/Layout.astro";
 <button>Send besked</button>
 </form>
 
-</Layout>
+</Layout> -->

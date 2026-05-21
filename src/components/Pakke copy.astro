@@ -5,10 +5,9 @@ const { pakke } = Astro.props;
 <div class="enkelpakke">
    <h2>{pakke.nummer}</h2>
    <p>{pakke.navn}</p>
-   <a href=`enkel_pakke/${pakke.id}`>
+   <a href="/enkelpakke">
    <button>Læs mere</button></a>
 </div>
-
    <style>
       h2{
          color: var(--color-white);
@@ -26,6 +25,10 @@ const { pakke } = Astro.props;
 
 /* Desktop */
 @media (min-width: 800px){
+   .enkelpakke{
+      display: flex;
+      flex-direction: row;
+   }
 }
 
    </style>

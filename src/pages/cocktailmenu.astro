@@ -3,5 +3,179 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Cocktail Menu">
-<h1>Cocktail menu</h1>
+
+    <body>
+
+<h1>Vores cocktail menu</h1>
+
+<div class="menutekst1">
+<p class="normalPtekst">Vælg jeres favorit drinks ud fra vores sortiment af cocktails, der omfavner klassiske cocktails, som Negroni, Espresso Martini og Whisky Sour, men også kreative og anderledes smage. Har du eksempelvis smagt en cocktail med koriander før?</p>
+<p class="normalPtekst">Dette er blot vores mest populære cocktails. Hvis du sidder inde med særlige ønsker omkring smag, farve, eller noget helt tredje, så udvikler vores bartendere det, særligt til dig. Det gælder både cocktails og mocktails.</p>
+<p class="normalPtekst">Vi kan helt sikkert garantere, at der vil være noget for hver en smag!</p>
+</div>
+
+<button class="send">Send forespørgsel</button>
+
+<section class="cocktailmenulineup">
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf3dab6f91526d32816_Cocktail_page_Sasha_Scherg-p-800.webp">
+  <p class="menutekst">Burning Lima</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="/public/SidecarBilleder/CocktailMenuBilleder/67125cf3b807dbb72ae51816_Cocktail_page_Sasha_Scherg-6-p-800.webp" alt="drink">
+  <p class="menutekst">Paloma</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf3e843ab5a68e1bbdd_Cocktail_page_Sasha_Scherg-3-p-800 (1).webp">
+  <p class="menutekst">Sidecar Stormy</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf4cbd69de8ee73d6ff_Cocktail_page_Sasha_Scherg-10-p-800.webp">
+  <p class="menutekst">Negroni</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf31b26b0ece06b17a4_Cocktail_page_Sasha_Scherg-12-p-800.webp" alt="drink">
+  <p class="menutekst">Peach Party</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf302d372e84a5b047f_Cocktail_page_Sasha_Scherg-9-p-800.webp" alt="drink">
+  <p class="menutekst">Chubby Chutney Sour</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf393e0b9a2de2cdfca_Cocktail_page_Sasha_Scherg-8-p-800 (1).webp" alt="drink">
+  <p class="menutekst">The 'Sidecar' Sidecar</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf35521c75eee84aa60_Cocktail_page_Sasha_Scherg-4-p-800.webp" alt="drink">
+ <p class="menutekst">Espresso Martini</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf346610e73370572a7_Cocktail_page_Sasha_Scherg-5-p-800.webp" alt="drink">
+  <p class="menutekst">Whisky Sour</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf36164780dc3e6104f_Cocktail_page_Sasha_Scherg-7-p-800 (1).webp" alt="drink">
+ <p class="menutekst">Tokyo Corvette</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf340642563f4635423_Cocktail_page_Sasha_Scherg-11-p-800 (1).webp" alt="drink">
+  <p class="menutekst">Miso Fashioned</p>
+</article>
+
+<article class="drink">
+<img class="drink" src="public/SidecarBilleder/CocktailMenuBilleder/67125cf4e015ba6ed364c1ed_Cocktail_page_Sasha_Scherg-2-p-800.webp" alt="drink">
+<p class="menutekst">Gin & Tonic</p>
+</article>
+
+</section>
+
+<h2>Skræddersy din egen menu - 
+eller lad os gøre det</h2>
+
+<div class="menutekst1">
+<p class="normalPtekst">Lad os vide hvilke særlige ønsker du har til dit arrangement. Du kan nemt vælge at have de samme cocktails i din bar, som nogle af dem på siden her. Hvis du har nogen særlige ønsker til smag, udtryk eller ingredienser, så finder vi på noget helt særligt til dig. Hvis du blot ønsker at supplere med et ølanlæg, så kan vi også sagtens hjælpe med det.</p>
+<p class="normalPtekst">Det vigtigste er at du har ligeså meget eller lidt indflydelse på menuen, som du har lyst til.</p>
+<p class="normalPtekst">Det er kun dig, din og vores fantasi, der sætter grænserne! Send en forespørgsel og lej en bar i dag.</p>
+</div>
+
+<button class="send">Send forespørgsel</button>
+
+    </body>
+
 </Layout>
+
+<style>
+
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.cocktailmenulineup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #2B3461;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.drink {
+    width: 160px;
+    justify-self: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem
+}
+
+.menutekst {
+    color: white;
+    text-align: center;
+}
+
+.send {
+    display: block;
+    margin: 0 auto 3rem auto;
+}
+
+.menutekst1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+       padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: #2B3461;;
+}
+
+
+@media (min-width: 800px){ 
+
+.send {
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+}
+
+.cocktailmenulineup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.drink {
+    width: 340px; 
+
+}
+
+.normalPtekst {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+h2 {
+    padding-top: 5rem;
+}
+
+}
+
+</style>

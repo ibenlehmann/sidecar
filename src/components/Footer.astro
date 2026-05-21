@@ -1,0 +1,169 @@
+---
+
+---
+
+
+
+    <div class="footerwrap">
+
+        <h1>Sidecar</h1>
+
+        <div class="footerwrap2">
+
+        <div class="upperrow">
+            <div class="adresse">
+    <p>Skyttegade 5, 2200 København</p>
+
+<p>+45 20 99 97 27
+info@sidecarnoerrebro.dk
+booking@sidecarnoerrebro.dk</p> 
+</div>
+
+<div class="åbningstider">
+<p>Hverdage - 8-16</p>
+<p>Lørdag - 9-16</p>
+<p>Søndag - 9-15:30</p>
+</div>
+</div>
+
+<div class="lowerrow">
+
+<div class="nyhedsbrev">
+
+<div class="input">
+<p class="lilleP">Tilmeld dig vores nyhedsbrev:</p>
+<input class="type" type="text">
+</div>
+
+<button class="tilmeld">Tilmeld</button>
+
+</div>
+
+<div class="some">
+<img class="somelogo" src="/public/SidecarBilleder/FooterLogos/instagram-white-icon.webp" alt="insta">
+<img class="somelogo" src="/public/SidecarBilleder/FooterLogos/facebook-app-round-white-icon.webp" alt="insta">
+<img class="somelogo" src="/public/SidecarBilleder/FooterLogos/kontrolsmiley-glad-mund.webp" alt="insta">
+</div>
+</div>
+</div>
+</div>
+
+
+<style>
+
+.footerwrap {
+     background-color: #2B3461;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.somelogo{
+    width: 40px;
+}
+
+.some {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top:2rem;
+}
+
+.lowerrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tilmeld {
+    margin-top: 0.8rem;
+    width: 5.5rem;
+    height: 2.3rem;
+        display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+}
+
+.upperrow {
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem;
+}
+
+.nyhedsbrev {
+margin-top: 1rem;
+}
+
+h1 {
+text-align: center;
+}
+
+.type {
+border-radius: 2rem;
+height: 1.8rem;
+border: none;
+}
+
+@media (min-width: 800px){ 
+
+    .somelogo{
+    width: 60px;
+    padding-top: 1rem;
+}
+
+.footerwrap2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.type {
+border-radius: 2rem;
+height: 2.5rem;
+width: 250px;
+border: none;
+}
+
+.lowerrow {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .some {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        gap: 1rem;
+        padding-top: 0; 
+        margin-left: auto; 
+      margin-right: 120px;
+
+    }
+
+    .somelogo {
+        width: 60px;
+    }
+
+    .nyhedsbrev {
+        margin-top: 0;
+        margin-left: 100px;
+    }
+
+    .åbningstider {
+          margin-left: 90px;
+    }
+
+    .adresse {
+         margin-left: 120px;
+    }
+
+    .tilmeld {
+        margin-right: 160px;
+        height: 45px;
+        width: 100px;
+    }
+}
+
+</style>

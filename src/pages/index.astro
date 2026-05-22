@@ -3,8 +3,141 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Forside">
-<h1>Brunchcafé i hjertet af Nørrebro</h1>
-<h2>henwk</h2>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, qui quidem fugit, ut ea tenetur optio quasi adipisci maiores facilis inventore! Ad, suscipit? Aperiam sequi perspiciatis repellendus provident numquam. Nemo?</p>
-<button>Tilmeld dig het</button>
+
+    <div class="hero">
+       <h1>Brunchcafé i hjertet af Nørrebro</h1>
+        </div>
+
+
+
+    <section class="indhold_sektion">
+        <div>
+<h2>Se vores brunch menu</h2>
+<p>Åbningstider:</p>
+<p>Hverdage - 8-16 </p>
+<p>Lørdag - 9-16</p>
+<p>Søndag - 9-15:30</p>
+<button>Menukort</button>
+</div>
+<div>
+<img src="img/brunchbord2forside.jpg" alt="Brunchbord">
+</div>
+    </section>
+<hr>
+ <section class="indhold_sektion omvendt">
+    <div>
+<h2>Se vores selskabslokaler</h2>
+<p>Åbningstider:</p>
+<p>Hverdage - 8-16 </p>
+<p>Lørdag - 9-16</p>
+<p>Søndag - 9-15:30</p>
+<button>Selskaber</button>
+</div>
+<div>
+<img src="img/indretningforside.jpg" alt="Indretning">
+</div>
+    </section>
+<hr>
+
+<section class="galleri">
+  <img src="img/brunchbord2forside.jpg" alt="">
+  <img src="img/brunchbord2forside.jpg" alt="">
+  <img src="img/brunchbord2forside.jpg" alt="">
+  <img src="img/brunchbord2forside.jpg" alt="">
+</section>
+
 </Layout>
+
+
+<style>
+
+ .hero {
+    height: 50vh;
+    background: url("/img/brunchbordforside.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+ img{
+width: 200px;
+height: auto;
+}
+
+ h1 {
+ color: var(--color-white);
+}
+     h2, p{
+    color: var(--color-secondary);
+  }
+
+.indhold_sektion {
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 1.5rem;
+  padding: 3rem;
+  }
+
+.galleri {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+max-width: 400px;
+margin: 0 auto;
+padding-top: 3rem;
+padding-bottom: 3rem;
+gap: 1rem;
+
+}
+
+.galleri img {
+width: 182px;
+height: auto;
+padding-bottom: 0.5rem;
+}
+
+
+
+  @media (min-width: 768px) {
+    .hero {
+      height: 90vh;
+    }
+
+     img{
+    width: 300px;
+    height: auto;
+}
+
+.indhold_sektion {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 5rem;
+  }
+
+  .omvendt {
+    flex-direction: row-reverse;
+  }
+
+
+.galleri {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap: 1rem;
+padding-top: 3rem;
+padding-bottom: 3rem;
+max-width: 1200px;
+}
+.galleri img {
+width: 300px;
+height: auto;
+padding-bottom: 0.5rem;
+}
+
+}
+</style>

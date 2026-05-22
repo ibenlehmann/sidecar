@@ -1,18 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
- <header class="header">
+
+<header class="header">
   <nav class="menu">
 
-    <div class="nav-gruppe">
+    <button class="burger" id="burger-btn">
+      ☰
+    </button>
+
+    
+    <div class="nav-gruppe" id="nav-menu">
       <a href="/menukort">Menu</a>
       <a href="/">Book bord</a>
       <a href="/selskaber">Selskaber</a>
+
+    <div class=" hidethis">
+           <a href="/">Gavekort</a>
+      <a href="/cocktailcatering">Cocktail catering</a>
+      <a href="/">Aftenbar</a>
     </div>
+      </div>
 
-    <a href="/index" class="logo">Sidecar</a>
+    <a href="/" class="logo">Sidecar</a>
 
-    <div class="nav-gruppe right">
+    <div class="nav-gruppe right" >
       <a href="/">Gavekort</a>
       <a href="/cocktailcatering">Cocktail catering</a>
       <a href="/">Aftenbar</a>
@@ -21,111 +33,134 @@ import Layout from "../layouts/Layout.astro";
   </nav>
 </header>
 
+<script>
+  const burgerBtn = document.getElementById("burger-btn");
+  const navMenu = document.getElementById("nav-menu");
+
+  burgerBtn?.addEventListener("click", () => {
+    navMenu?.classList.toggle("open");
+  });
+</script>
+
+<style>
+
+.header {
+  background: var(--color-secondary);
+  padding: 28px 30px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+}
+
+/* BURGERMENUEN */
+.burger {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 28px;
+  cursor: pointer;
+}
 
 
-      <style>
+.nav-gruppe {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  position: absolute;
+  top: 80px;
+  left: -30px;
+
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 20px 30px;
+}
 
 
+.nav-gruppe.open {
+  display: flex;
+}
 
+.right {
+  display: none;
+}
 
- .header {
-    background: #262d63;
-    padding: 28px 60px;
-    
-
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .nav-gruppe {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-  }
-
-  .right {
-    justify-content: flex-end;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-    font-weight: 400;
-    transition: opacity 0.2s ease;
-  }
-
-  a:hover {
-    opacity: 0.7;
-  }
-
-  .logo {
-    font-size: 14px;
-    
-    line-height: 1;
-    white-space: nowrap;
-
-    
-   font-family: "Gloock", serif;
+a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
   font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 32px;
+  line-height: 1;
+  white-space: nowrap;
+  font-family: "Gloock", serif;
+  font-weight: 400;
+}
+
+.hidethis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media (min-width: 768px) {
+
+  .burger {
+    display: none;
   }
 
-@media (min-width: 768px) 
-{
-
- .header {
-    background: #262d63;
+  .header {
     padding: 28px 60px;
   }
 
   .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 48px;
   }
 
   .nav-gruppe {
-    display: flex;
+    display: flex !important;
+    position: static;
+    flex-direction: row;
     align-items: center;
     gap: 40px;
     flex: 1;
+    background: none;
+    padding: 0;
+    width: auto;
   }
 
   .right {
     justify-content: flex-end;
+    display: flex;
   }
 
   a {
-    color: white;
-    text-decoration: none;
     font-size: 20px;
-    font-weight: 400;
-    transition: opacity 0.2s ease;
-  }
-
-  a:hover {
-    opacity: 0.7;
   }
 
   .logo {
     font-size: 55px;
-    
-    line-height: 1;
-    white-space: nowrap;
-
-    
-   font-family: "Gloock", serif;
-  font-weight: 400;
   }
+
+  .hidethis {
+  display: none;
+}
 }
 
-      </style>
-
-      
+</style>

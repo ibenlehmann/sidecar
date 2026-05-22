@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 
     <body>
 
-<h1>Vores cocktail menu</h1>
+<h1>Vores cocktail catering menu</h1>
 
 <div class="menutekst1">
 <p class="normalPtekst">Vælg jeres favorit drinks ud fra vores sortiment af cocktails, der omfavner klassiske cocktails, som Negroni, Espresso Martini og Whisky Sour, men også kreative og anderledes smage. Har du eksempelvis smagt en cocktail med koriander før?</p>
@@ -108,7 +108,7 @@ body {
 .cocktailmenulineup {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #2B3461;
+    background-color: var(--color-secondary);
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin-top: 2rem;
@@ -123,7 +123,7 @@ body {
 }
 
 .menutekst {
-    color: white;
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -143,7 +143,7 @@ h1, h2 {
     padding-right: 2rem;
     padding-top: 2rem;
     text-align: center;
-    color: #2B3461;;
+    color: var(--color-secondary);
 }
 
 a {
@@ -154,7 +154,7 @@ a {
 @media (min-width: 800px){ 
 
 .send {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     margin-top: 4rem;
 }
 
@@ -178,6 +178,13 @@ a {
 
 h2 {
     padding-top: 5rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.menutekst1 {
+    width: 1340px;
+    justify-self: center;
 }
 
 }

@@ -36,11 +36,20 @@ const { pakke } = Astro.props;
             <div>
  <h2>{pakke.nummer}</h2>
    <h2>{pakke.navn}</h2>
-   <p>{pakke.info}</p>
+    <p class="li" set:html={pakke.info}></p>
 </div>
 <div>
    <img src={pakke.img} alt="pakker">
 </div>
+</div>
+<div class="pakker_cta">
+    <p>Læs om de andre pakkeløsninger</p>
+    <a href={pakke.id=1}>
+    <button>Pakke 1</button></a>
+    <a href={pakke.id=2}>
+    <button>Pakke 2</button></a>
+    <a href={pakke.id=3}>
+    <button>Pakke 3</button></a>
 </div>
 </section>
 
@@ -304,5 +313,16 @@ width: 1200px;
 }
 
    }
+.pakker_cta{
+justify-self: center;
+text-align: center;
+}
+.pakker_cta button{
+    margin: 0px 20px;
+}
+.pakker_cta p{
+    font-weight: 600;
+}
+
 
 </style>

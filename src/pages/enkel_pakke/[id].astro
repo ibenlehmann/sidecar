@@ -43,36 +43,80 @@ const { pakke } = Astro.props;
 </div>
 </div>
 </section>
-   <h2>Kontakt os</h2>
 
-<form class="webform">
+<div class="line"></div>
+
+ <h2 class="kontaktH2">Kontakt os og få et tilbud</h2>
+<p class="kontakttP">Skriv til os gennem formularen og vi vender tilbage snarest muligt for at diskutere mulighederne.</p>
+
+<form id="webform">
+
 <fieldset>
-    <label for="name">Fulde navn</label>
-    <input class="text" type="text" name="name" id="name" required value="Dit fulde navn">
-</fieldset>
-<fieldset>
-    <label for="pakke">Vælg pakke</label>
-    <input type="text" name="pakke" id="pakke" value="Vælge pakke her">
-</fieldset>
-<fieldset>
-    <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" required value="Din e-mailadresse">
-</fieldset>
-<fieldset>
-    <label for="date_time">Dato og tidspunkt for ankomst</label>
-    <input type="text" name="" id="date_time" value="Dato & tidspunkt">
-</fieldset>
-<fieldset>
-    <label for="gaester">Antal gæster</label>
-    <input type="number" name="antal" id="gaester" value="Indtast et tal">
-</fieldset>
-<fieldset>
-    <label for="besked">Besked</label>
-    <textarea name="besked" id="besked" rows="6" cols="40" required>Beskriv hvad du/i kunne tænke jer...</textarea>
+
+<div class="navnognummer">
+
+  <div class="felt">
+    <label for="full_name">Fulde navn</label>
+    <input type="text" id="full_name" required>
+  </div>
+
+  <div class="felt">
+    <label for="vaelg_pakke">Pakke</label>
+    <select name="pakker" id="vaelg_pakke">
+    <option value="">Vælg en pakke</option>
+    <option value="Pakke 1">Pakke 1</option>
+    <option value="Pakke 2">Pakke 2</option>
+    <option value="Pakke 3">Pakke 3</option>
+    </select>
+  </div>
+
+</div>
+
+<div class="virksomhed">
+
+<label for="virksomhed_type">Virksomhedsnavn og cvr-nummer (Undlad som privatperson)</label>
+    <input type="text" id="virksomhed">
+
+</div>
+
+
+<div class="email">
+
+     <label for="email">Email</label>
+    <input type="email" id="email" required>
+    <span class="fejlmeddelse"></span>
+
+</div>
+
+<div class="datooggaester">
+
+      <div class="felt">
+    <label for="time_date">Dato & tidspunkt for ankomst</label>
+    <input type="date" id="time_date" required>
+    <span class="fejlmeddelse"></span>
+</div>
+
+<div class="felt">
+     <label for="guest_number">Antal gæster</label>
+    <input type="text" id="guest_numberr" required>
+    <span class="fejlmeddelse"></span>
+</div>
+
+</div>
+
+<div class="message">
+
+    <label for="message">Besked</label>
+            <textarea name="message" id="message"></textarea>
+
+</div>
+
+<button class="sendbesked">Send besked</button>
+
 </fieldset>
 
-<button>Send besked</button>
 </form>
+
 
 </Layout>
 
@@ -94,4 +138,171 @@ h2:first-of-type{
 h2:last-of-type{
     margin-top: 0px;
 }
+
+
+
+
+#webform {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  width: 80%;
+}
+
+.navnognummer,
+.virksomhed,
+.email,
+.datooggaester,
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+ font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: solid #2B3461 2px;
+  border-radius: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.message textarea {
+  height: 150px;
+}
+
+.line {
+    width: 300px;
+    justify-self: center;
+  height: 1px;
+  background-color: var(--color-secondary);
+
+}
+
+
+.kontaktH2 {
+    padding-top: 5rem;
+}
+
+.sendbesked {
+    margin-bottom: 4rem;
+}
+
+.felt {
+  display: flex;
+  flex-direction: column;
+}
+
+  .book_btn {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    margin-right: 1rem;
+    border-radius: 15px 15px 0 0;
+    z-index: 100;
+  }
+
+
+  .kontakttP {
+padding: 0;
+padding-left: 2rem;
+padding-right: 2rem;
+text-align: center;
+padding-bottom: 2rem;
+}
+
+.kontaktH2 {
+    text-align: center;
+    padding: 0;
+    padding-top: 3rem;
+}
+
+select {
+  padding: 12px;
+  border: solid #2B3461 2px;
+  border-radius: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  background-color: white;
+}
+
+.line {
+    width: 300px;
+    justify-self: center;
+  height: 1px;
+  background-color: var(--color-secondary);
+
+}
+
+  @media (min-width: 800px){
+
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+input,
+textarea, select {
+  padding: 12px;
+  border: solid #2B3461 2px;
+  border-radius: 30px;
+  height: 60px;
+}
+
+  .navnognummer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .datooggaester {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+  }
+
+  fieldset {
+  border: none;
+  width: 60%; }
+
+.sendbesked {
+    margin-bottom: 6rem;
+}
+
+ .book_btn {
+    top: 60%;
+    margin-right: 1.5rem;
+  }
+
+.line {
+width: 1200px;
+
+}
+
+.kontaktH2 {
+    padding-top: 5rem;
+}
+
+   }
+
 </style>

@@ -11,8 +11,10 @@ import Layout from "../layouts/Layout.astro";
    <div class="cocktailheroimagetext">
 <h1>Cocktail Catering</h1>
 <p class="heroP">Skræddersyet til dit event</p>
-<a href="/pages/cocktailmenu.astro"><button class="semenu">Se cocktail menu</button></a>
+<a href="/cocktailmenu"><button class="semenu">Se cocktail menu</button></a>
 </div>
+
+  <button class="book_btn"> Cocktail Menu </button>
 
 <h2>En komplet barløsning til enhver lejlighed</h2>
 
@@ -62,7 +64,7 @@ import Layout from "../layouts/Layout.astro";
 
 </div>
 
-<a href="/pages/cocktailmenu.astro"><button class="button">Send forespørgelse</button></a>
+<a href="/cocktailmenu"><button class="button">Send forespørgelse</button></a>
 
 </section>
 
@@ -79,8 +81,75 @@ Når du inviterer Sidecar med til din fest, får du mere end bare en bar – du 
 <p class="bottomtextt3">Hos Sidecar handler det om at levere cocktail oplevelser i særklasse, med fokus på friske råvarer. Vi går op i eget håndværk, og laver vores egne sirupper, cordialer, infuseringer selv, for at sikre den ønskede smag i hver eneste cocktail. De elementer vi ikke selv kan lave, sørger vi for at købe den bedst mulige kvalitet. For os er gode cocktails nemlig mere end bare spiritus; det er de friske ingredienser, der udgør nerven.Det er cocktails, der smager af omtanke – fordi dine gæster fortjener det bedste.</p>
 </div>
 
+<div class="line"></div>
 
-<a href="/cocktailmenu">Gavekort</a>
+
+<h2 class="kontaktH2">Kontakt os og få et tilbud</h2>
+<p class="kontakttP">Skriv til os gennem formularen og vi vender tilbage snarest muligt for at diskutere mulighederne.</p>
+
+
+<form id="webform">
+
+<fieldset>
+
+<div class="navnognummer">
+
+  <div class="felt">
+    <label for="full_name">Fulde navn</label>
+    <input type="text" id="full_name" required>
+  </div>
+
+  <div class="felt">
+    <label for="phone_number">Telefonnummer</label>
+    <input type="text" id="phone_number" required>
+  </div>
+
+</div>
+
+<div class="virksomhed">
+
+<label for="virksomhed_type">Virksomhedsnavn og cvr-nummer (Undlad som privatperson)</label>
+    <input type="text" id="virksomhed">
+
+</div>
+
+
+<div class="email">
+
+     <label for="email">Email</label>
+    <input type="email" id="email" required>
+    <span class="fejlmeddelse"></span>
+
+</div>
+
+<div class="datooggaester">
+
+      <div class="felt">
+    <label for="time_date">Dato&tidspunkt</label>
+    <input type="date" id="time_date" required>
+    <span class="fejlmeddelse"></span>
+</div>
+
+<div class="felt">
+     <label for="guest_number">Antal gæster</label>
+    <input type="text" id="guest_numberr" required>
+    <span class="fejlmeddelse"></span>
+</div>
+
+</div>
+
+<div class="message">
+
+    <label for="message">Besked</label>
+            <textarea name="message" id="message"></textarea>
+
+</div>
+
+<button class="sendbesked">Send besked</button>
+
+</fieldset>
+
+</form>
 
 
  </body>
@@ -220,6 +289,89 @@ a {
     text-decoration: none;
 }
 
+.kontakttP {
+padding: 0;
+padding-left: 2rem;
+padding-right: 2rem;
+text-align: center;
+padding-bottom: 2rem;
+}
+
+
+#webform {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  width: 80%;
+}
+
+.navnognummer,
+.virksomhed,
+.email,
+.datooggaester,
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+ font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: solid #2B3461 2px;
+  border-radius: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.message textarea {
+  height: 150px;
+}
+
+.line {
+    width: 300px;
+    justify-self: center;
+  height: 1px;
+  background-color: #2B3461;
+
+}
+
+
+.kontaktH2 {
+    padding-top: 2rem;
+}
+
+.sendbesked {
+    margin-bottom: 4rem;
+}
+
+.felt {
+  display: flex;
+  flex-direction: column;
+}
+
+  .book_btn {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    margin-right: 1rem;
+    border-radius: 15px 15px 0 0;
+    z-index: 100;
+  }
+
 @media (min-width: 800px){ 
 
 .herobilledecocktail {
@@ -238,7 +390,7 @@ a {
 }
 
 h2{
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 
 .cocktailimgheight {
@@ -298,7 +450,53 @@ margin-right: 200px;
     padding-bottom: 3rem;
 }
 
+.line {
+width: 1200px;
+
 }
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: solid #2B3461 2px;
+  border-radius: 30px;
+  height: 60px;
+}
+
+  .navnognummer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .datooggaester {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+  }
+
+  fieldset {
+  border: none;
+  width: 60%; }
+
+.sendbesked {
+    margin-bottom: 6rem;
+}
+
+ .book_btn {
+    top: 60%;
+    margin-right: 1.5rem;
+  }
+
+}
+
 
 
 

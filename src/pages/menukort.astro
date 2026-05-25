@@ -169,23 +169,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   }
 
 
-  /* skal flyttes*/
-  h3{
-     font-family: "Gloock", serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--color-secondary);
-  }
-
-  h4{
-    font-family: "Gloock", serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: var(--color-primary);
-    justify-self: center;
-  }
-
-  /* hero sektion */
+  /************ hero sektion ************/
   .hero{
    display: flex;
    flex-direction: column;
@@ -204,7 +188,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
     margin-bottom: 0;
   }
 
-  /* MENU flere SEKTIONER */
+  /************ Menuer ************/
   .menu_mad1 p,
   .menu_other p,
   .coffee p,
@@ -225,7 +209,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   .drinks,
   .wine,
   .beer{
-    margin: 0 2.5rem;
+    margin: 0 4rem;
   }
 
   .menu_mad1 h3,
@@ -253,7 +237,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
 
 
 
-  /* Blå kasse */
+  /************ Blå kasse ************/
   .bla_kasse{
     background-color: var(--color-secondary);
     margin: 62px auto 4rem;
@@ -278,7 +262,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
     margin: 0 0 5px;
   } 
 
-  /* drikkevarer */
+  /************ drikkevarer ************/
   .drikke_1 h2{
     justify-self: center;
     margin: 7rem 0 2rem;
@@ -293,42 +277,19 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   padding-bottom: 1px;
 }
 
-  /* IMG */
+  /*********** IMG ***********/
   img{
     width: 50%;
     justify-self: center;
     margin: 2rem 0;
   }
 
-  /* KNAP skal nok også flyttes */
-
-    .book_btn {
-    position: fixed;
-    top: 60%;
-    right: 0;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: right center;
-    margin-right: 1rem;
-    border-radius: 15px 15px 0 0;
-    z-index: 100;
-  }
+  /************ KNAPPER ************/
 
   .btn{
-    font-size: 15px;
-	background-color: var(--color-action);
-    color: var(--color-white);
-    cursor: pointer;
-    border-radius: 15px;
-    border-style: none;
-    padding: 15px 35px;
-    text-decoration: none;
     justify-self: center;
   }
 
-  .btn:hover,
-  .top_btn:hover{
-	background-color: #a84f40;
-}
 
 .knapper{
   display: flex;
@@ -349,7 +310,10 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   height: 50px;
   border-radius: 50%;
   margin: 2rem;
+}
 
+.top_btn:hover{
+	background-color: #a84f40;
 }
 
 
@@ -357,13 +321,6 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
  /* DESKTOP */
   @media (min-width: 800px){
 
-      h3{
-    font-size: 40px;
-  }
-
-  h4{
-    font-size: 30px;
-  }
     /* hero */
     .hero{
    padding: 4rem 0;
@@ -396,7 +353,6 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   .drinks{
     margin-left: 5rem;
     margin-right: 2rem;
-    min-width: 600px;
   }
 
   .tea,
@@ -406,7 +362,6 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   .beer{
     margin-left: 2rem;
     margin-right: 5rem;
-    min-width: 600px;
   
   }
 
@@ -430,13 +385,6 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
  /* drikke*/
   .drikke_1 h2{
     margin: 14rem 0 4rem;
-  }
-
-
-  /* KNAP */
-   .book_btn {
-    top: 60%;
-    margin-right: 1.5rem;
   }
 
   /* IMG */

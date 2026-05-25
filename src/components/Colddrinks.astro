@@ -1,0 +1,52 @@
+---
+const { cold } = Astro.props;
+---
+
+<section class="cold">
+    <p class="p_bold">{cold.navn}</p>
+    <p class="pris">{cold.pris} kr.</p>
+</section>
+
+<style>
+       p{
+       color: var(--color-secondary);
+      }
+
+      .p_bold{
+         font-weight: 600;
+         font-size: 18px;
+         margin-bottom: 5px;
+         margin-top: 25px;
+      }
+
+
+     .cold{
+        display: flex;
+        justify-content: space-between;
+       align-items: end;
+       border-bottom: 1px solid var(--color-black);
+       min-height: 62px;
+        
+     }
+
+     .pris{
+        align-self: end;
+        margin-bottom: 5px;
+        
+     }
+
+     /* desktop*/
+     @media (min-width: 800px){
+
+     .p_bold{
+        font-size: 25px;
+     }
+
+      .cold{
+      min-height: 75px;
+     }
+
+     }
+
+
+</style>

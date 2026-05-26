@@ -38,7 +38,7 @@ const { pakke } = Astro.props;
    <h2>{pakke.navn}</h2>
     <p class="li" set:html={pakke.info}></p>
 </div>
-<div>
+<div class="img">
    <img class="img" src={pakke.img} alt="pakker">
 </div>
 </div>
@@ -273,7 +273,7 @@ select {
 }
 
 .img{
-    width: 400px;
+   width: 400px;
 
 }
 
@@ -327,6 +327,15 @@ textarea, select {
 
    }
 
+   @media screen and (max-width: 1000px) and (min-width: 800px){
+    .img{
+   width: 200px;
+
+}
+.grid_pakke{
+    gap: 3rem;
+}
+   }
 
 
 </style>

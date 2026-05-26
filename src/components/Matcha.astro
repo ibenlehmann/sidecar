@@ -1,0 +1,53 @@
+---
+const { matcha } = Astro.props;
+---
+
+
+<section class="matcha">
+    <p class="p_bold">{matcha.navn}</p>
+    <p class="pris">{matcha.pris} kr.</p>
+</section>
+
+<style>
+       p{
+       color: var(--color-secondary);
+      }
+
+      .p_bold{
+         font-weight: 600;
+         font-size: 18px;
+         margin-bottom: 5px;
+         margin-top: 25px;
+      }
+
+
+     .matcha{
+        display: flex;
+        justify-content: space-between;
+       align-items: end;
+       border-bottom: 1px solid var(--color-black);
+       min-height: 62px;
+        
+     }
+
+     .pris{
+        align-self: end;
+        margin-bottom: 5px;
+        
+     }
+
+     /* desktop*/
+     @media (min-width: 800px){
+
+     .p_bold{
+        font-size: 25px;
+     }
+
+      .matcha{
+      min-height: 75px;
+     }
+
+     }
+
+
+</style>

@@ -21,29 +21,40 @@ import Layout from "../layouts/Layout.astro";
 <a href="/menukort"><button class="knap">Menukort</button></a>
 </div>
 <div>
-<img src="img/brunchbord2forside.jpg" alt="Brunchbord">
+<img id="img_ani" src="img/brunchbord2forside.webp" alt="Brunchbord">
 </div>
     </section>
-<hr>
+<div class="line"></div>
+
  <section class="indhold_sektion omvendt">
     <div>
 <h2>Se vores selskabslokale</h2>
-<p class="tekstselskaber">Udlej vores indbydende, lyse og store lokale, der passer til en hver begivenhed. Vi er dedikerede til at give de bedste rammer til dit næste selskab, og styler lokalet efter dine behov. Læs mere om, hvilke muligheder vi tilbyder. </p>
+<p class="tekstselskaber">Udlej vores indbydende, lyse og store lokale, der passer til enhver begivenhed. Vi er dedikerede til at give de bedste rammer til dit næste selskab, og styler lokalet efter dine behov. Læs mere om, hvilke muligheder vi tilbyder. </p>
 
 <a href="/selskaber"><button class="knap">Selskaber</button></a>
 </div>
 <div>
-<img src="img/indretningforside.jpg" alt="Indretning">
+<img id="img_ani" src="img/indretningforside.webp" alt="Indretning">
 </div>
     </section>
-<hr>
+
+<section class="omos">
+<div>
+<h2 class="overskriftomos"> Historien bag Sidecar</h2>
+</div>
+<div class="omosdel2">
+<img src="img/Omosbillede.webp" alt="Historie">
+<p class="tekstomos">Sidecar startede for 10 år siden som en cocktail pop-up bar drevet af to venner, der serverede drinks til bl.a. bryllupper og events. Succesen førte til, at vi åbnede vores eget sted, som er opkaldt efter den klassiske cocktail “Sidecar”. Oprindeligt var fokus kun på cocktails, men for at skabe mere liv i dagtimerne begyndte vi også at servere morgenmad og brunch. Gennem de sidste 10 år har vi udviklet os til et af de mest populære brunchsteder i København. I dag er vi kendt for at kombinere en stor buffet med varme retter direkte fra køkkenet, og vi har åbent alle ugens 7 dage.</p>
+</div>
+</section>
+
 
 <section class="galleri">
-  <img src="img/galleri1.jpg" alt="">
-   <img src="img/galleri4.jpg" alt="">
+  <img src="img/galleri1.webp" alt="">
+   <img src="img/galleri4.webp" alt="">
 
-  <img src="img/galleri3.jpg" alt="">
-    <img src="img/galleri2.jpg" alt="">
+  <img src="img/galleri3.webp" alt="">
+    <img src="img/galleri2.webp" alt="">
  
 </section>
 
@@ -54,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
 
  .hero {
     height: 50vh;
-    background: url("/img/brunchbordforside.jpg") center/cover no-repeat;
+    background: url("/img/brunchbordforside.webp") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,8 +81,12 @@ height: auto;
  h1 {
  color: var(--color-white);
 }
-     h2, p{
-    color: var(--color-secondary);
+     h2 {
+       color: var(--color-secondary);
+     }
+     
+     p{
+    color: var(--color-black);
   }
 
 .indhold_sektion {
@@ -97,8 +112,8 @@ gap: 1rem;
 }
 
 .galleri img {
-width: 182px;
-height: auto;
+height: 250px;
+width: auto;
 padding-bottom: 0.5rem;
 }
 
@@ -115,6 +130,43 @@ padding-bottom: 0.5rem;
 
   .knap {
     margin-top: 1.5rem;
+}
+
+.omos {
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  gap: 1.5rem;
+  padding: 3rem;
+  background-color: var(--color-secondary);
+
+  }
+
+  .omos img {
+    width: 280px;
+    height: auto;
+   justify-self:center;
+   padding-bottom: 2rem;
+  }
+
+  .overskriftomos {
+    color: var(--color-white);
+  }
+
+  .tekstomos {
+    color: var(--color-white);
+    max-width: 440px;
+  }
+
+
+  .line {
+    width: 300px;
+    justify-self: center;
+  height: 1px;
+  background-color: var(--color-secondary);
+
 }
   @media (min-width: 768px) {
     .hero {
@@ -143,8 +195,8 @@ padding-bottom: 0.5rem;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 1rem;
-padding-top: 3rem;
-padding-bottom: 3rem;
+padding-top: 6rem;
+padding-bottom: 6rem;
 justify-content: center;
 }
 .galleri img {
@@ -160,5 +212,27 @@ padding-bottom: 0.5rem;
   .tekstselskaber {
     max-width: 550px;
   }
+
+  .omosdel2 {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 4rem;
+   padding-bottom: 1rem;
+  }
+
+  .omos img {
+    width: 490px;
+    height: auto;
+  
+  }
+
+  .tekstomos {
+    max-width: 480px;
+   
+  }
+  .line {
+width: 1200px;
+
+}
 }
 </style>

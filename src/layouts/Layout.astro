@@ -60,7 +60,9 @@ img {
 	background-color: var(--color-primary);
   }
 
-h1, h2, button {
+
+/* OVERSKRIFTER OG TEKST */
+h1, h2, h3, h4, button, .btn {
   font-family: "Gloock", serif;
   font-weight: 400;
 }
@@ -71,6 +73,18 @@ h1{
 h2{
 	font-size: 22px;
 }
+
+h3{
+    font-size: 20px;
+    color: var(--color-secondary);
+  }
+
+h4{
+    font-size: 18px;
+    color: var(--color-primary);
+    justify-self: center;
+  }
+
 p, ul {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -78,7 +92,9 @@ p, ul {
   font-size: 14px;
 }
 
-button{
+/* KNAPPER */
+button,
+.btn{
 	font-size: 15px;
 	background-color: var(--color-action);
     color: var(--color-white);
@@ -89,7 +105,8 @@ button{
     text-decoration: none;
     justify-self: center;
 }
-button:hover{
+button:hover,
+.btn:hover{
 	background-color: #a84f40;
 }
 
@@ -100,6 +117,47 @@ button:hover{
   background-color: var(--color-secondary);
 }
 
+.book_btn {
+  position: fixed;
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right center;
+  margin-right: 1rem;
+  border-radius: 15px 15px 0 0;
+  z-index: 100;
+}
+
+/* ANIMATIONER */
+button:not(.book_btn):hover,
+.btn:hover{
+  animation: hop 0.5s ease;
+}
+
+@keyframes hop{
+  50%{
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes op_ned {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0 );
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+#img_ani {
+  animation: op_ned ease-out both;
+  animation-timeline: view();
+  animation-range: 10% 50%;
+}
+
+/* DESKTOP */
 @media (min-width: 800px){
 h1{
 	font-size: 60px;
@@ -107,12 +165,29 @@ h1{
 h2{
 	font-size: 48px;
 }
-button{
-	font-size: 20px;
-}
+
+h3{
+    font-size: 40px;
+  }
+
+  h4{
+    font-size: 30px;
+  }
+
 p, ul{
 	font-size: 20px;
 	line-height: 27px;
+}
+
+/* KNAP */
+   .book_btn {
+    top: 60%;
+    margin-right: 1.5rem;
+  }
+
+  button,
+.btn{
+	font-size: 20px;
 }
 
 }

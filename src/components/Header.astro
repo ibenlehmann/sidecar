@@ -11,13 +11,13 @@ import Layout from "../layouts/Layout.astro";
 
     
     <div class="nav-gruppe" id="nav-menu">
-      <a href="/menukort">Menu</a>
-      <a href="/">Book bord</a>
-      <a href="/selskaber">Selskaber</a>
+      <a class="menuLine" href="/menukort">Menu</a>
+      <a href="/">Book bord </a>
+      <a class="selskaberLine" href="/selskaber">Selskaber</a>
 
     <div class=" hidethis">
            <a href="/">Gavekort</a>
-      <a href="/cocktailcatering">Cocktail catering</a>
+      <a class="CocktailLine" href="/cocktailcatering">Cocktail catering</a>
       <a href="/">Aftenbar</a>
     </div>
       </div>
@@ -46,7 +46,8 @@ import Layout from "../layouts/Layout.astro";
 
 .header {
   background: var(--color-secondary);
-  padding: 28px 30px;
+  padding: 28px 0px;
+ 
 }
 
 .menu {
@@ -55,6 +56,8 @@ import Layout from "../layouts/Layout.astro";
   justify-content: space-between;
   gap: 10px;
   position: relative;
+   z-index: 1000;
+  
 }
 
 /* BURGERMENUEN */
@@ -73,18 +76,20 @@ import Layout from "../layouts/Layout.astro";
   align-items: flex-start;
   gap: 20px;
 
-  position: absolute;
+   position: absolute;
   top: 80px;
-  left: -30px;
+  left: 0;
+  right: 0;
 
   width: 100%;
   background: var(--color-secondary);
-  padding: 20px 30px;
+  padding: 20px 40px;
 }
 
 
 .nav-gruppe.open {
   display: flex;
+   width: 100%;
 }
 
 .right {
@@ -110,6 +115,7 @@ a:hover {
   white-space: nowrap;
   font-family: "Gloock", serif;
   font-weight: 400;
+  padding-right: 2rem;
 }
 
 .hidethis {
@@ -119,7 +125,7 @@ a:hover {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
 
   .burger {
     display: none;

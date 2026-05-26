@@ -1,0 +1,71 @@
+---
+const { beer } = Astro.props;
+---
+
+<section class="beer">
+     
+    <div>
+      <p class="p_bold">{beer.navn}</p>
+      <p class="p_special">{beer.beskrivelse}</p>
+    </div>
+    <p class="pris">{beer.pris} kr.</p>
+    
+</section>
+   
+
+    <style>
+          p{
+       color: var(--color-secondary);
+      }
+
+      .p_bold{
+         font-weight: 600;
+         font-size: 18px;
+         margin-bottom: 0;
+         margin-top: 25px;
+      }
+
+
+    .p_special{
+      margin: 0;
+      padding-bottom: 5px;
+      max-width: 200px;
+     }
+
+     .beer{
+        display: flex;
+        justify-content: space-between;
+       align-items: end;
+       border-bottom: 1px solid var(--color-black);
+       min-height: 62px;
+        
+     }
+
+     .pris{
+        align-self: end;
+        margin-bottom: 5px;
+        
+     }
+
+     /* tablet*/
+     @media (min-width: 530px){
+        .p_special{
+      max-width: 300px;
+     }
+
+     }
+
+     /* desktop*/
+     @media (min-width: 800px){
+
+     .p_bold{
+        font-size: 25px;
+     }
+
+      .beer{
+      min-height: 75px;
+     }
+
+     }
+
+    </style>

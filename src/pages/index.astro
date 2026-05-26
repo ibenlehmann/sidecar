@@ -21,10 +21,11 @@ import Layout from "../layouts/Layout.astro";
 <a href="/menukort"><button class="knap">Menukort</button></a>
 </div>
 <div>
-<img id="img_ani" src="img/brunchbord2forside.jpg" alt="Brunchbord">
+<img id="img_ani" src="img/brunchbord2forside.webp" alt="Brunchbord">
 </div>
     </section>
-<hr>
+<div class="line"></div>
+
  <section class="indhold_sektion omvendt">
     <div>
 <h2>Se vores selskabslokale</h2>
@@ -33,7 +34,7 @@ import Layout from "../layouts/Layout.astro";
 <a href="/selskaber"><button class="knap">Selskaber</button></a>
 </div>
 <div>
-<img id="img_ani" src="img/indretningforside.jpg" alt="Indretning">
+<img id="img_ani" src="img/indretningforside.webp" alt="Indretning">
 </div>
     </section>
 
@@ -49,11 +50,11 @@ import Layout from "../layouts/Layout.astro";
 
 
 <section class="galleri">
-  <img src="img/galleri1.jpg" alt="">
-   <img src="img/galleri4.jpg" alt="">
+  <img src="img/galleri1.webp" alt="">
+   <img src="img/galleri4.webp" alt="">
 
-  <img src="img/galleri3.jpg" alt="">
-    <img src="img/galleri2.jpg" alt="">
+  <img src="img/galleri3.webp" alt="">
+    <img src="img/galleri2.webp" alt="">
  
 </section>
 
@@ -64,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
 
  .hero {
     height: 50vh;
-    background: url("/img/brunchbordforside.jpg") center/cover no-repeat;
+    background: url("/img/brunchbordforside.webp") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,8 +81,12 @@ height: auto;
  h1 {
  color: var(--color-white);
 }
-     h2, p{
-    color: var(--color-secondary);
+     h2 {
+       color: var(--color-secondary);
+     }
+     
+     p{
+    color: var(--color-black);
   }
 
 .indhold_sektion {
@@ -155,6 +160,14 @@ padding-bottom: 0.5rem;
     max-width: 440px;
   }
 
+
+  .line {
+    width: 300px;
+    justify-self: center;
+  height: 1px;
+  background-color: var(--color-secondary);
+
+}
   @media (min-width: 768px) {
     .hero {
       height: 90vh;
@@ -217,5 +230,9 @@ padding-bottom: 0.5rem;
     max-width: 480px;
    
   }
+  .line {
+width: 1200px;
+
+}
 }
 </style>

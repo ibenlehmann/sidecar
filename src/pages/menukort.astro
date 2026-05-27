@@ -54,7 +54,7 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
   <body>
     <section id="top" class="hero">
    <h1>Menu</h1>
-   <p> Der bliver serveret fra kl. 9-15 hver dag.</p>
+   <p class="p_1"> Der bliver serveret fra kl. 9-15 hver dag.</p>
    <p class="vg">Veganske retter = vg</p>
    <div class="knapper">
     <a href="#drikkevarer" class="btn">Se drikkevarer</a>
@@ -178,8 +178,13 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
     
   }
 
-  .hero p{
+  .p_1{
     margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .vg{
+    margin-top: 2px;
     margin-bottom: 3rem;
   }
 
@@ -327,9 +332,8 @@ const mad = await fetch("https://qvojbjzhnzwsmxjbsnze.supabase.co/rest/v1/menuMa
     
   }
 
-  .hero p{
-    margin-top: 0;
-    margin-bottom: 4rem;
+  .vg{
+    margin-bottom: 5rem;
   }
 
   /* blå kasse*/

@@ -8,6 +8,15 @@ I dette projekt har vi lavet et redesign af Sidecars hjemmeside. Vi har udviklet
 
 ---
 
+## Team medlemmer
+
+- Ea (cocktailcatering.astro + cocktailmenu.astro + Footer.astro)
+- Iben (selskaber.astro + [id].astro + Pakke.astro + Enkelpakke.astro)
+- Laura (menukort.astro + tilhørende komponenter fx. Menumad.astro)
+- Sofie (index.astro + Header.astro)
+
+---
+
 ### Links
 
 - GitHub repository:

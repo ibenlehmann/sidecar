@@ -114,17 +114,20 @@ background-color: var(--color-action);
 
 #btn2{
 background-color: var(--color-action2);
+color: var(--color-secondary);
 
 }
 
 #btn2:hover{
 background-color: var(--color-action);
+color: var(--color-white);
 }
 
 
 button:hover,
 .btn:hover{
 	background-color: var(--color-action2);
+  color: var(--color-secondary);
 }
 
 .line {
@@ -146,7 +149,7 @@ button:hover,
 }
 
 /* ANIMATIONER */
-button:not(.book_btn):hover,
+button:not(.book_btn):not(.knap):hover,
 .btn:hover,
 .btn2:hover{
   animation: hop 0.5s ease;

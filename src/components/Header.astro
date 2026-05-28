@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
     
     <div class="nav-gruppe" id="nav-menu">
-      <a href="/"><button class="knap">Da/En</button></a>
+      <a href="/"><button class="knap" >Da/En</button></a>
       <a class="menuLine" href="/menukort">Menu</a>
       <a href="/">Book bord </a>
       <a class="selskaberLine" href="/selskaber">Selskaber</a>
@@ -128,7 +128,15 @@ a:hover {
 .knap {
   padding: 5px 12px;
   font-size: 12px;
+  background-color: var(--color-action2);
+  color: var(--color-secondary);
 }
+
+.knap:hover{
+  background-color: var(--color-action);
+  color: var(--color-white);
+}
+
 
 @media (min-width: 900px) {
 

@@ -6,7 +6,7 @@ const { pakke } = Astro.props;
    <img src={pakke.img} alt="pakker">
    <h2>{pakke.nummer}</h2>
    <p>{pakke.navn}</p>
-   <a href=`enkel_pakke/${pakke.navn.trim()
+   <a href=`/enkel_pakke/${pakke.navn.trim()
   .toLowerCase()
   .replace(/\s+/g, "-")}`><button id="btn2">Læs mere</button>
    </a>

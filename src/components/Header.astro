@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
- 
-    
+
 <header class="header">
- 
   <nav class="menu">
 
     <button class="burger" id="burger-btn">
@@ -13,6 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
     
     <div class="nav-gruppe" id="nav-menu">
+      <a href="/"><button class="knap">Da/En</button></a>
       <a class="menuLine" href="/menukort">Menu</a>
       <a href="/">Book bord </a>
       <a class="selskaberLine" href="/selskaber">Selskaber</a>
@@ -126,6 +125,10 @@ a:hover {
   gap: 20px;
 }
 
+.knap {
+  padding: 5px 12px;
+  font-size: 12px;
+}
 
 @media (min-width: 900px) {
 
@@ -154,7 +157,8 @@ a:hover {
   }
 
   .right {
-    justify-content: flex-end;
+   justify-content: flex-start;
+    padding-left: 90px;
     display: flex;
   }
 
@@ -164,10 +168,16 @@ a:hover {
 
   .logo {
     font-size: 55px;
+    padding-left: 6rem;
   }
 
   .hidethis {
   display: none;
+}
+
+.knap {
+  padding: 5px 12px;
+  font-size: 12px;
 }
 }
 

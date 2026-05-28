@@ -19,9 +19,7 @@ I dette projekt har vi lavet et redesign af Sidecars hjemmeside. Vi har udviklet
 
 ### Links
 
-- GitHub repository:
-- GitHub Pages:
-- Netlify:
+- GitHub repository: https://github.com/ibenlehmann/sidecar 
 - Figma: https://www.figma.com/design/Mztrq6JaJUudSdbim1fl2Z/Eksamen---gruppe-6?node-id=0-1&t=OJnpYJvMA5ymv60Q-1
 - Trello: https://trello.com/b/5IpqWraj/eksamensprojekt-team-6
 

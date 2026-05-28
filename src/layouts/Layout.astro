@@ -51,7 +51,8 @@ img {
   html{
 	--color-primary: #f5ecdb;
 	--color-secondary:#2b3461;
-	--color-action: #c76758;
+	--color-action: #B04838;
+  --color-action2: #D98C80;
 	--color-black: #100e0e;
 	--color-white: #f7f7f7;
   }
@@ -62,7 +63,7 @@ img {
 
 
 /* OVERSKRIFTER OG TEKST */
-h1, h2, h3, h4, button, .btn {
+h1, h2, h3, h4, button, .btn, #btn2 {
   font-family: "Gloock", serif;
   font-weight: 400;
 }
@@ -94,9 +95,9 @@ p, ul {
 
 /* KNAPPER */
 button,
-.btn{
+.btn,
+#btn2{
 	font-size: 15px;
-	background-color: var(--color-action);
     color: var(--color-white);
     cursor: pointer;
     border-radius: 15px;
@@ -105,9 +106,25 @@ button,
     text-decoration: none;
     justify-self: center;
 }
+
+button,
+.btn{
+background-color: var(--color-action);
+}
+
+#btn2{
+background-color: var(--color-action2);
+
+}
+
+#btn2:hover{
+background-color: var(--color-action);
+}
+
+
 button:hover,
 .btn:hover{
-	background-color: #a84f40;
+	background-color: var(--color-action2);
 }
 
 .line {
@@ -130,7 +147,8 @@ button:hover,
 
 /* ANIMATIONER */
 button:not(.book_btn):hover,
-.btn:hover{
+.btn:hover,
+.btn2:hover{
   animation: hop 0.5s ease;
 }
 
@@ -186,7 +204,8 @@ p, ul{
   }
 
   button,
-.btn{
+.btn,
+#btn2{
 	font-size: 20px;
 }
 
